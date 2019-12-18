@@ -87,6 +87,7 @@ a {
 	align-items: flex-start;
 	flex-direction: row;
 	background-color: #000000;
+	min-height: 70px;
 }
 
 .site-navigation,
