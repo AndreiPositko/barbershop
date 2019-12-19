@@ -559,11 +559,6 @@ body {
 }
 
 
-.container {
-	display: flex;
-	justify-content: space-between;
-}
-
 .site-navigation,
 .user-navigation {
 	list-style: none;
