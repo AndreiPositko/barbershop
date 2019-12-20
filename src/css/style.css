@@ -3,7 +3,6 @@ body {
 	margin: 0;
 	padding: 0;
 
-
 	font-family: "PT Sans Narrow", Arial, sans-serif;
 
 	font-size: 14px;
@@ -37,6 +36,14 @@ a {
 
 .main-header {
 	margin-bottom: 75px;
+}
+
+.main-navigation-wrapper {
+	width: 100%;
+	margin-bottom: 60px;
+
+	background-color: #000000;
+	border: 1px solid white; /*temporary*/
 }
 
 .inner-page {
@@ -98,7 +105,6 @@ a {
 	flex-direction: row;
 
 /*	
-
 	background-color: #000000;*/
 	width: 960px;
 	margin: auto;
@@ -332,7 +338,7 @@ a {
 .filter input:hover + label,
 .filter input:focus + label {
 	color: #663d15;
-  }
+}
 
 .filter input:disabled + label {
 	color: #000000;
@@ -544,7 +550,6 @@ body {
 	border: 1px solid yellow; /*temporary*/
 }
 
-
 .inner-page .main-header-logo {
 	order: 0;
 
@@ -553,11 +558,9 @@ body {
 	padding: 23px 20px;
 }
 
-
 .inner-page .user-navigation {
 	margin-left:auto;
 }
-
 
 .site-navigation,
 .user-navigation {
