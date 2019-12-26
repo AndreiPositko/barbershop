@@ -222,12 +222,13 @@ input[type="radio"].visually-hidden {
 .features-list {
 	display: flex;
 	justify-content: space-between;
+	align-content: space-between;
 
 	margin: 0;
 	padding: 0;
 
 	list-style: none;
-	min-height: 170px;
+	/*min-height: 170px;*/
 }
 
 .feature-item {
@@ -236,7 +237,8 @@ input[type="radio"].visually-hidden {
 
 	background: rgba(255, 45, 82, 0.2);
 	box-shadow: 0 0 0 3px rgb(255, 45, 82);
-	min-height: 170px;
+
+/*	min-height: 170px;*/
 }
 
 .feature-item h3 {
@@ -260,8 +262,13 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 	width: 20px;
 	height: 20px;
+	transform: rotate(45deg);
 
 	background-color: #ffffff;
+}
+
+.feature-item p {
+	margin: 0 10px;
 }
 
 /*новости и фотогаллерея*/
@@ -275,9 +282,11 @@ input[type="radio"].visually-hidden {
 	color: #000000;
 
 	background-color: #f8f5f2;
-	background-image: url("../img/pattern-bg-light.jpg");
-	background-position: 0 0;
-	background-repeat: repeat;
+	background-image:
+	url(../img/line.png),
+	url("../img/pattern-bg-light.jpg");
+	background-position: center, 0 0;
+	background-repeat: no-repeat, repeat;
 }
 
 .index-colums h2 {
@@ -288,6 +297,8 @@ input[type="radio"].visually-hidden {
 .news {
 	width: 380px;
 
+	background: rgba(0, 128, 0, 0.2);
+	box-shadow: 0 0 0 3px green;
 	border: 1px solid yellow; /*temporary*/
 }
 
