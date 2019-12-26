@@ -94,8 +94,11 @@ input[type="radio"].visually-hidden {
 /*стиль кнопок*/
 
 .button {
-	font: inherit;
+	display: inline-block;
+	padding: 15px 30px;
+	margin-right: 16px;
 
+	font: inherit;
 	text-align: center;
 	color: #ffffff;
 	vertical-align: middle;
@@ -105,10 +108,17 @@ input[type="radio"].visually-hidden {
 	border: none;
 }
  
-.button: hover,
-.button: focus,
-.button: active {
+.button:hover,
+.button:focus,
+.button:active {
 	background-color: #663d15;
+}
+
+.button.disabled,
+.button:disabled {
+	cursor: default;
+	opacity: 0.5;
+	background-color: #000000;
 }
 
 /*стиль для основной навигации*/
@@ -222,13 +232,12 @@ input[type="radio"].visually-hidden {
 .features-list {
 	display: flex;
 	justify-content: space-between;
-	align-content: space-between;
 
 	margin: 0;
 	padding: 0;
 
 	list-style: none;
-	/*min-height: 170px;*/
+
 }
 
 .feature-item {
@@ -238,7 +247,6 @@ input[type="radio"].visually-hidden {
 	background: rgba(255, 45, 82, 0.2);
 	box-shadow: 0 0 0 3px rgb(255, 45, 82);
 
-/*	min-height: 170px;*/
 }
 
 .feature-item h3 {
@@ -250,6 +258,10 @@ input[type="radio"].visually-hidden {
 	font-height: 42px;
 
 	background: rgba(255, 45, 82, 0.9);
+}
+
+.feature-item p {
+	margin: 0 10px;
 }
 
 .feature-item h3::after {
@@ -267,10 +279,6 @@ input[type="radio"].visually-hidden {
 	background-color: #ffffff;
 }
 
-.feature-item p {
-	margin: 0 10px;
-}
-
 /*новости и фотогаллерея*/
 
 .index-colums {
@@ -283,13 +291,16 @@ input[type="radio"].visually-hidden {
 
 	background-color: #f8f5f2;
 	background-image:
-	url(../img/line.png),
+	url("../img/line.png"),
 	url("../img/pattern-bg-light.jpg");
-	background-position: center, 0 0;
+	background-position:center, 0 0;
 	background-repeat: no-repeat, repeat;
 }
 
 .index-colums h2 {
+	margin: 0;
+	margin-bottom: 25px;
+
 	font-size: 30px;
 	line-height: 42px;
 }
@@ -298,50 +309,135 @@ input[type="radio"].visually-hidden {
 	width: 380px;
 
 	background: rgba(0, 128, 0, 0.2);
-	box-shadow: 0 0 0 3px green;
-	border: 1px solid yellow; /*temporary*/
+	box-shadow: 0 0 0 3px; /*temporary*/
 }
 
-.news-list,
+.news-list {
+	margin: 0;
+	margin-bottom: 25px;
+	padding: 0;
+
+	list-style: none;
+}
+
+.news-item {
+	margin-bottom: 25px;
+}
+
+/*.news-list,
 .gallery-content {
 	padding: 0;
 	margin: 0;
-}
+}*/
 
 .gallery {
 	width: 300px;
 
-	border: 1px solid yellow; /*temporary*/
+	background: rgba(0, 128, 0, 0.2);
+	box-shadow: 0 0 0 3px; /*temporary*/
 }
 
-.news-list {
-	list-style: none;
+.gallery-container {
+	position: relative;
+
+	height: 260px;
+
+	background: rgba(0, 125, 0, 0.2);
+	box-shadow: 0 0 0 3px; /*temporary*/
+}
+
+.gallery-content {
+	height: 164px;
+	margin: 0;
+	background-color: #e5e5e5;
+	border: 7px solid #ffffff;
+}
+
+.gallery-content img {
+	width: 286px;
+	height: 164;
+}
+
+.gallery-button {
+	position: absolute;
+	box-sizing: border-box;
+	bottom: 0;
+
+	width: 140px;
+	margin: 0;
+}
+
+.gallery-button-back {
+	left: 0;
+}
+
+.gallery-button-next {
+	right: 0;
+}
+
+.margin-item p {
+	margin: 0;
 }
 
 .news-item time {
 	text-transform: none;
 }
 
-.gallery-content {
-	background-color: #e5e5e5;
-	border: 7px solid #ffffff;
-}
 
 /*контакты и запись*/
 
 .contacts {
 	width: 380px;
 
-	border: 1px solid yellow; /*temporary*/
+	background: rgba(0, 128, 0, 0.2);
+	box-shadow: 0 0 0 3px; /*temporary*/
+}
+
+.contacts p {
+	margin: 0;
+	margin-bottom: 25px;
 }
 
 .appointment {
 	width: 300px;
 
-	border: 1px solid yellow; /*temporary*/
+	background: rgba(0, 128, 0, 0.2);
+	box-shadow: 0 0 0 3px; /*temporary*/
+}
+
+.appointment-info {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.appointment-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.appointment-item {
+	width: 140px;
+	margin: 0;
+	margin-bottom: 10px;
+
+	background: rgba(234, 255, 45, 0.2);
+	box-shadow: 0 0 0 2px rgb(234, 255, 45);
+}
+
+.appointment-item label {
+	display: block;
+	margin-bottom: 10px;
+	margin-left: 15px;
 }
 
 .appointment-item input {
+	box-sizing: border-box;
+	width: 140px;
+	padding-top: 8px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 7px;
 	font: inherit;
 
 	background-color: transparent;
@@ -350,6 +446,12 @@ input[type="radio"].visually-hidden {
 
 .appointment-item input:focus {
 	border-color: #663d15;
+}
+
+.appointment .button {
+	width: 100%;
+	margin-top: 10px;
+	margin-right: 0;
 }
 
 /*список 3 сумок в айтеме*/
@@ -591,12 +693,38 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 }
 
+.footer-social b {
+	display: block;
+	margin-bottom: 15px;
+}
+
 .social-button {
-	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 43px;
+	height: 43px;
+
+	background-color: #000000;
+}
+
+.social-button:hover,
+.social-button:focus {
+	background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+	fill: #000000;
 }
 
 .footer-copyright {
 	text-align: center;
+}
+
+.footer-copyright b {
+	display: block;
+	margin-bottom: 15px;
 }
 
 .footer-copyright .button:hover,
@@ -700,6 +828,16 @@ body {
 	border: 1px solid yellow; /*temporary*/
 }
 
+.footer-social ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 141px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
 .footer-copyright {
 	width: 150px;
 	margin-left: auto;
@@ -711,5 +849,3 @@ body {
 	display: flex;
 	justify-content: space-between;
 }
-
-
