@@ -107,7 +107,7 @@ input[type="radio"].visually-hidden {
 	background-color: #000000;
 	border: none;
 }
- 
+
 .button:hover,
 .button:focus,
 .button:active {
@@ -131,8 +131,6 @@ input[type="radio"].visually-hidden {
 	font-size: 16px;
 	font-height: 20px;
 	color: #ffffff;
-
-/*	background-color: #000000; */
 }
 
 /*стиль для основной навигации 2 и 3 страницы */
@@ -244,8 +242,8 @@ input[type="radio"].visually-hidden {
 	width: 300px;
 	text-align: center;
 
-	background: rgba(255, 45, 82, 0.2);
-	box-shadow: 0 0 0 3px rgb(255, 45, 82);
+/*	background: rgba(255, 45, 82, 0.2);
+	box-shadow: 0 0 0 3px rgb(255, 45, 82);*/
 
 }
 
@@ -257,7 +255,7 @@ input[type="radio"].visually-hidden {
 	font-size: 30px;
 	font-height: 42px;
 
-	background: rgba(255, 45, 82, 0.9);
+/*	background: rgba(255, 45, 82, 0.9);*/
 }
 
 .feature-item p {
@@ -307,8 +305,9 @@ input[type="radio"].visually-hidden {
 
 .news {
 	width: 380px;
+	position: relative;
 
-	background: rgba(0, 128, 0, 0.2);
+/*	background: rgba(0, 128, 0, 0.2);
 	box-shadow: 0 0 0 3px; /*temporary*/
 }
 
@@ -324,16 +323,15 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 25px;
 }
 
-/*.news-list,
-.gallery-content {
-	padding: 0;
-	margin: 0;
-}*/
+.news .button {
+	position: absolute;
+	bottom: 0;
+}
 
 .gallery {
 	width: 300px;
 
-	background: rgba(0, 128, 0, 0.2);
+/*	background: rgba(0, 128, 0, 0.2);
 	box-shadow: 0 0 0 3px; /*temporary*/
 }
 
@@ -342,7 +340,7 @@ input[type="radio"].visually-hidden {
 
 	height: 260px;
 
-	background: rgba(0, 125, 0, 0.2);
+/*	background: rgba(0, 125, 0, 0.2);
 	box-shadow: 0 0 0 3px; /*temporary*/
 }
 
@@ -389,7 +387,7 @@ input[type="radio"].visually-hidden {
 .contacts {
 	width: 380px;
 
-	background: rgba(0, 128, 0, 0.2);
+/*	background: rgba(0, 128, 0, 0.2);
 	box-shadow: 0 0 0 3px; /*temporary*/
 }
 
@@ -401,7 +399,7 @@ input[type="radio"].visually-hidden {
 .appointment {
 	width: 300px;
 
-	background: rgba(0, 128, 0, 0.2);
+/*	background: rgba(0, 128, 0, 0.2);
 	box-shadow: 0 0 0 3px; /*temporary*/
 }
 
@@ -421,8 +419,8 @@ input[type="radio"].visually-hidden {
 	margin: 0;
 	margin-bottom: 10px;
 
-	background: rgba(234, 255, 45, 0.2);
-	box-shadow: 0 0 0 2px rgb(234, 255, 45);
+/*	background: rgba(234, 255, 45, 0.2);
+	box-shadow: 0 0 0 2px rgb(234, 255, 45);*/
 }
 
 .appointment-item label {
@@ -440,8 +438,8 @@ input[type="radio"].visually-hidden {
 	padding-bottom: 7px;
 	font: inherit;
 
-	background-color: transparent;
-	border: 2px solid #000000
+/*	background-color: transparent;
+	border: 2px solid #000000*/
 }
 
 .appointment-item input:focus {
@@ -722,6 +720,11 @@ input[type="radio"].visually-hidden {
 	text-align: center;
 }
 
+.footer-copyright .button {
+	display: block;
+	margin-right: 0;
+}
+
 .footer-copyright b {
 	display: block;
 	margin-bottom: 15px;
@@ -788,9 +791,9 @@ body {
 .main-header-logo {
 	order: 2;
 	width: 368px;
-	height: 157px;
+	height: 157px; 
 
-	border: 1px solid yellow; /*temporary*/
+/*	border: 1px solid yellow; /*temporary*/
 }
 
 .inner-page .main-header-logo {
@@ -819,13 +822,13 @@ body {
 	margin: 0;
 	margin-right: 80px;
 
-	border: 1px solid yellow; /*temporary*/
+/*	border: 1px solid yellow; /*temporary*/
 }
 
 .footer-social {
 	width: 145px;
 
-	border: 1px solid yellow; /*temporary*/
+/*	border: 1px solid yellow; /*temporary*/
 }
 
 .footer-social ul {
@@ -842,7 +845,7 @@ body {
 	width: 150px;
 	margin-left: auto;
 
-	border: 1px solid yellow; /*temporary*/
+/*	border: 1px solid yellow; /*temporary*/
 }
 
 .catalog-colums {
