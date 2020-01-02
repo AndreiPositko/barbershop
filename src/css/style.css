@@ -282,6 +282,7 @@ input[type="radio"].visually-hidden {
 
 .feature-item p {
 	margin: 0 10px;
+	line-height: 1.8;
 }
 
 .feature-item h3::after {
@@ -340,6 +341,10 @@ input[type="radio"].visually-hidden {
 
 .news-item {
 	margin-bottom: 25px;
+}
+
+.news-item p {
+	line-height: 1.5;
 }
 
 .news .button {
@@ -403,6 +408,7 @@ input[type="radio"].visually-hidden {
 .contacts p {
 	margin: 0;
 	margin-bottom: 25px;
+	line-height: 1.5;
 }
 
 .appointment {
@@ -670,6 +676,7 @@ input[type="radio"].visually-hidden {
 	width: 320px;
 	margin: 0;
 	margin-right: 80px;
+	line-height: 1.7;
 }
 
 .footer-social {
