@@ -890,6 +890,10 @@ body {
 	z-index: 2;
 }
 
+.modal-show {
+	display: block;
+}
+
 /*Оверлей*/
 /*.modal-overlay {
 	position: fixed;
