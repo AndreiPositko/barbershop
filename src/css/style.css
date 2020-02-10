@@ -10,6 +10,8 @@ body {
 	font-weight: 700;
 	color: #ffffff;
 	text-transform: uppercase;
+	line-height: 20px;
+	letter-spacing: 0.6px;
 
 	background-color: #000000;
 	background-image: url("../img/bg.jpg");
@@ -100,7 +102,7 @@ input[type="radio"].visually-hidden {
 
 .button {
 	display: inline-block;
-	padding: 15px 30px;
+	padding: 12px 30px;
 	margin-right: 16px;
 
 	font: inherit;
@@ -288,7 +290,7 @@ input[type="radio"].visually-hidden {
 .feature-item h3::after {
 	content: "";
 
-	bottom: -30px;
+	bottom: -40px;
 	left: 50%;
 	margin-left: -10px;
 
@@ -485,7 +487,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product-price a {
-	color: #ffffff;w
+	color: #ffffff;
 }
 
 .product-info h3 {
@@ -513,9 +515,12 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 50px;
 
 	list-style: none;
+	display: flex;
 }
 
 .breadcrumbs a {
+	margin-right: 45px;
+
 	color: #000000;
 }
 
@@ -528,9 +533,35 @@ input[type="radio"].visually-hidden {
 	color: #aba9a7;
 }
 
+.breadcrumbs li {
+	position: relative;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	right: 15px;
+	top: 5px;
+	transform: rotate(45deg);
+
+	background-color: #000000;
+}
+
 .catalog-colums {
 	display: flex;
 	justify-content: space-between;
+}
+
+.product-photos {
+	width: 460px;
+	min-height: 670px;
+}
+
+.product-info {
+	width: 390px;
+	min-height: 670px;
 }
 
 .filters {
@@ -574,7 +605,7 @@ input[type="radio"].visually-hidden {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 25px;
-	list-style:none;
+	list-style: none;
 }
 
 .catalog-item {
@@ -626,6 +657,7 @@ input[type="radio"].visually-hidden {
 	margin: 0;
 
 	list-style: none;
+	min-height: 47px;
 }
 
 .pagination-item a {
@@ -676,6 +708,7 @@ input[type="radio"].visually-hidden {
 	width: 320px;
 	margin: 0;
 	margin-right: 80px;
+
 	line-height: 1.7;
 }
 
@@ -696,6 +729,7 @@ input[type="radio"].visually-hidden {
 .footer-copyright {
 	width: 150px;
 	margin-left: auto;
+	margin-top: 0;
 }
 
 .inner-page .main-footer {
@@ -836,6 +870,14 @@ body {
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 	z-index: 2;
 }
+
+.modal-show {
+	display: block;
+	animation-name: bounce;
+	animation-duration: 0.6s;
+}
+
+
 
 /*Оверлей*/
 /*.modal-overlay {
@@ -1029,4 +1071,25 @@ body {
 
 .modal-map p {
 	margin: 0;
+}
+
+/* Анимация */
+
+@keyframes bounce {
+	0% { transform: translateY(-2000px); }
+	70% {transform: translateY(30px);}
+	90% {transform: translateY(-10px);}
+	100% {transform: translateY(0);}
+}
+
+
+@keyframes shake {
+0%, 100% {transform: translateX(0);}
+10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+.modal-error {
+	animation-name: shake;
+	animation-duration: 0.6s;
 }
