@@ -33,6 +33,7 @@ close.addEventListener('click', function(evt) {
 });
 
 form.addEventListener('submit', function(evt) {
+	console.log(login);
 	if (!login.value || !password.value) {
 		evt.preventDefault();
 		popup.classList.add('modal-error');
